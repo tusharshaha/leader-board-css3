@@ -1,7 +1,43 @@
-/* top player style start*/
-.players{
+/*----------
+fonts
+------------ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+/*--------------
+ common styles
+ ---------------*/
+body{
+    background-color: #F3F1FF;
+    font-family: 'Poppins', sans-serif;
+}
+main{
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container{
+    background-color: #FFFFFF;
+    padding:30px;
+    width: 870px;
+    border-radius: 5px;
+    margin-top: 21px;
+}
+hr{
+    border: 1px solid #D1D1D1;
+    margin-bottom: 27px;
+}
+/*-----------------
+ top player style
+ ------------------*/
+.section-title{
+    color: #562EFF;
+    margin-top: 3px;
+
+}
+.top-players{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 30px ;
+    margin-bottom: 30px;
 }
 .player{
     display: flex;
@@ -11,4 +47,94 @@
     width: 56px;
     height: 56px;
 }
-/* top player style end */
+ .player-name{
+    margin-left: 16px;
+    font-size: 18px;
+
+}
+/*----------------------
+ top blog section
+ ----------------------*/
+.blogs{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 26px;
+}
+.blog{
+    display: flex;
+}
+.thumbnail img{
+    height: 117px;
+    width: 177px;
+}
+.blog-info{
+    margin-left: 16px;
+}
+.blog-title{
+    font-size: 20px;
+}
+.blog-author{
+    color: #9F9F9F;
+    font-size: 16px;
+}
+.blog-author a{
+    text-decoration: none;
+    color: #562EFF;
+}
+/*------------------------
+ latest course style
+ -----------------------*/
+ .courses{
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-column-gap: 23.61px;
+ }
+ .course{
+     width: 252.42px;
+     height:269.79px ;
+ }
+ .course-banner img{
+    width: 224px;
+    height: 104px;
+ }
+ .course-info{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+ .fa-star.filled{
+     color: #FFC014;
+ }
+ .fa-star.empty{
+     color: #AEAEAE;
+     opacity: 0.25;
+ }
+ .duration{
+     display: flex;
+     width: 94.83px;
+     height: 29.38px;
+     background-color:
+     #FFE4E8;
+     border-radius: 14.69px;
+     color:#FF4A60;
+     justify-content: center;
+     align-items: center;
+     padding: 0 2px 0 2px;
+ }
+/* ..............
+    Media Quares
+----------------*/
+/* Mobile */
+@media only screen and (max-width:668px) {
+    .container{
+        width: 100%;
+    }
+    .top-players, .blogs, .courses{
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+    .top-players, .blogs, .courses{
+       flex-direction: column;
+
+    }
+}
